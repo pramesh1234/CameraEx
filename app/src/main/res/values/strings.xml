@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">CameraEx</string>
+    <string name="reset">Reset</string>
+    <string name="save">Save</string>
+    <string name="edit">Edit</string>
+    <string name="open_gallery">Open gallery</string>
+    <string name="take_selfie">Take selfie</string>
+</resources>

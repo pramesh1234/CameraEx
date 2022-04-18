@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.MainActivity">
+<TextView
+    android:id="@+id/editTV"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/edit"
+    app:layout_constraintEnd_toEndOf="@id/endGL"
+    app:layout_constraintTop_toTopOf="parent"
+    android:textStyle="bold"
+    android:visibility="gone"
+    android:textSize="20sp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginTop="10dp"
+    />
+    <TextView
+        android:id="@+id/defaultMsgTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Use the buttons below to take photo from camera or add a photo from gallery"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/endGL"
+        app:layout_constraintStart_toStartOf="@id/beginGL"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@+id/imageIV"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@id/editTV"
+        android:layout_marginTop="10dp"
+        android:background="#D1D0D0"
+        app:layout_constraintStart_toStartOf="@id/beginGL"
+        app:layout_constraintEnd_toEndOf="@id/endGL"
+        app:layout_constraintBottom_toTopOf="@id/takeSelfieIV"/>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/takeSelfieIV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/beginGL"
+        android:text="@string/take_selfie"
+        android:textAllCaps="false"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toStartOf="@id/openGalleryBtn"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+<com.google.android.material.button.MaterialButton
+    android:id="@+id/openGalleryBtn"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    app:layout_constraintEnd_toEndOf="@id/endGL"
+    android:text="@string/open_gallery"
+    android:layout_marginStart="10dp"
+    android:textAllCaps="false"
+    app:layout_constraintStart_toEndOf="@id/takeSelfieIV"
+    app:layout_constraintBottom_toBottomOf="parent"
+    />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/endGL"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="9dp" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/beginGL"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="10dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
